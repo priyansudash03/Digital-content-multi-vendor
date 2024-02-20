@@ -1,0 +1,40 @@
+{% extends "myApp/base.html" %}
+
+{% block body %}
+
+
+<div class="flex flex-col justify-center items-center min-h-screen">
+    <h1 class="font-bold text-lg">🔐Register</h1>
+    <form method="post" class="shadow-lg p-10">
+        {% csrf_token %}
+        <div class="mb-2">
+            <label for="">Username</label>
+            <div class="border rounded py-2 px-2 mr-10">
+                {{ user_form.username }}
+            </div>
+        </div>
+        <div class="mb-2">
+            <label for="">Email</label>
+            <div class="border rounded py-2 px-2 mr-10">
+                {{ user_form.email }}
+            </div>
+        </div>
+        <div class="mb-2">
+            <label for="">Password</label>
+            <div class="border rounded py-2 px-2 mr-10">
+                {{ user_form.password }}
+            </div>
+        </div>
+        <div class="mb-2">
+            <label >Confirm password</label>
+            <div class="border rounded py-2 px-2 mr-10">
+                {{ user_form.password2 }}
+            </div>
+        </div>
+        <button class="bg-green-500 text-white px-4 py-2" type="submit">Create user</button>
+    </form>
+    <p>Already registered? <span><a class="text-indigo-500" href="{% url 'login' %}">Login in</a></span> </p>
+</div>
+
+
+{% endblock %}

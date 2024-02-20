@@ -1,0 +1,23 @@
+{% extends "myApp/base.html" %}
+
+{% block body %}
+
+    <div class="flex p-10">
+        <div class="w-3/5 h-auto">
+            <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="">
+
+        </div>
+        <div class="pl-10">
+            <div class="text-4xl mb-4">{{product.name}}</div>
+            <div class="mb-4">{{product.description}}</div>
+            <div class="mb-4 text-green-700 font-bold">₹{{product.price}}</div>
+            <div>
+                <a href="{% url "success" product.id %}"><button id="checkout-button" class="bg-green-500 text-white px-4 py-2 rounded-sm">Buy</button></a>
+            </div>
+            <div id="myemail" hidden>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock  %}
