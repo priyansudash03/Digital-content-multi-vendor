@@ -1,4 +1,4 @@
-#Digital-content-Multi-Vendor site
+# Digital-content-Multi-Vendor site
 
 This project is a content publishing platform built using Django and Tailwind CSS. Users can register, login, and upload various content types like PDFs, notes, and images. It also includes features for:
 
